@@ -1,0 +1,308 @@
+//fonts
+// font-family: 'Noto Sans', sans-serif;
+// font-family: 'Spline Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Spline+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/bg.jpg");
+    // background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//nav bar
+header {
+    // border: 2px solid red;
+    position: fixed;
+    z-index: 100;
+    padding: 8px 10px;
+    background: none;
+    height: 55px;
+    width: 98vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        padding-top: 52px;
+        width: 95px;
+    }
+    .menu {
+        display: flex;
+        align-items: flex-start;
+        li {
+            list-style: none;
+            .links {
+                cursor: pointer;
+                text-decoration: none;
+                color: white;
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 1.3rem;
+                margin: 0 10px;
+            }
+        }
+    }
+    i {
+        font-size: 3.2rem;
+        color: white;
+        margin: 10px 20px 0 0;
+    }
+}
+
+@media only screen and(max-width:530px) {
+    header {
+        .menu {
+            li {
+                .links {
+                    font-size: 1rem;
+                    margin: 0 8px;
+                }
+            }
+        }
+        i {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+@media only screen and(max-width:425px) {
+    header {
+        padding: 8px;
+        width: 98vw;
+        img {
+            padding-top: 30px;
+            width: 75px;
+        }
+        .menu {
+            display: flex;
+            align-items: flex-start;
+            li {
+                .links {
+                    font-size: 0.8rem;
+                    margin: 0 8px;
+                }
+            }
+        }
+        i {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+@media only screen and(max-width:365px) {
+    header {
+        .menu {
+            li {
+                .links {
+                    font-size: 0.65rem;
+                }
+            }
+        }
+        i {
+            font-size: 1.75rem;
+        }
+    }
+}
+
+//content-songs
+#content {
+    padding: 130px 28px 60px 28px;
+    .h_primary {
+        color: white;
+    }
+    #song_container {
+        // border: 5px solid red;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        .songs {
+            // border: 5px solid red;
+            background-color: rgba(102, 102, 102, 0.822);
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 455px;
+            height: 72px;
+            margin: 15px;
+            padding: 8px 12px;
+            img {
+                width: 56px;
+                border-radius: 50%;
+            }
+            .h_secondary,
+            .body,
+            i {
+                color: white;
+                text-align: center;
+            }
+            i {
+                font-size: 1.4rem;
+                margin-right: 2px;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:510px) {
+    #content {
+        padding: 95px 15px 60px 15px;
+        #song_container {
+            .songs {
+                border-radius: 14px;
+                height: 65px;
+                margin: 10px;
+                img {
+                    width: 50px;
+                }
+                i {
+                    font-size: 1.15rem;
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:410px) {
+    #content {
+        #song_container {
+            .songs {
+                height: 50px;
+                margin: 10px 0 10px 0;
+                img {
+                    width: 40px;
+                }
+                i {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+//footer
+#footer {
+    overflow: hidden;
+    width: 100vw;
+    background-color: rgba(102, 102, 102, 0.822);
+    // border: 5px solid red;
+    padding: 0 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    #footer_info {
+        padding: 0 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .body {
+            color: white;
+        }
+        #songName {
+            width: 150px;
+            text-align: center;
+        }
+        #control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 6px;
+            i {
+                font-size: 1.5rem;
+                margin: 4px 10px;
+                color: white;
+            }
+        }
+        #playingGif {
+            width: 45px;
+            opacity: 0;
+            transition: all 0.3s ease-in;
+        }
+    }
+    #progressBar {
+        height: 6px;
+        width: 95vw;
+        outline: none;
+        background: none;
+        cursor: pointer;
+    }
+}
+
+@media only screen and(max-width:510px) {
+    #footer {
+        padding: 0;
+        #footer_info {
+            padding: 0 15px;
+            #songName {
+                text-align: center;
+                width: 83px;
+            }
+        }
+    }
+}
+
+//utilities
+.h_primary {
+    font-size: 1.86rem;
+    font-family: 'Spline Sans', sans-serif;
+    letter-spacing: 0.45rem;
+    word-spacing: 0.55rem;
+}
+
+@media only screen and(max-width:510px) {
+    .h_primary {
+        font-size: 1.3rem;
+        letter-spacing: 0.1rem;
+        word-spacing: 0.1rem;
+    }
+}
+
+@media only screen and(max-width:410px) {
+    .h_primary {
+        font-size: 1.05rem;
+        letter-spacing: 0;
+        word-spacing: 0;
+    }
+}
+
+.h_secondary {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.8rem;
+}
+
+@media only screen and(max-width:510px) {
+    .h_secondary {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and(max-width:410px) {
+    .h_secondary {
+        font-size: 0.6rem;
+    }
+}
+
+.body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.55rem;
+}
+
+@media only screen and(max-width:410px) {
+    .body {
+        font-size: 0.38rem;
+    }
+}
+
+i {
+    cursor: pointer;
+}
